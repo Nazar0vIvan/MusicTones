@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /* Shift + Alt + A - block comment/uncomment */ 
 
@@ -93,22 +94,20 @@ header {
   font-weight: 600;
   letter-spacing: 0.05em;
   color: #121212;
-  -webkit-font-smoothing: antialiased;
 }
 
 .header-authn__log-in {
   border: 1px solid #121212;
-  background: linear-gradient(to right, #ff9800 50%, white 50%);
-  background-size: 200% 100%;
-  transition: all 0.2s ease-out;
+  -webkit-font-smoothing: antialiased;
 }
 
 .header-authn__log-in:hover {
-  background-position: left bottom;
+  opacity: 1.0;
 }
 
 .header-authn__sign-up {
   background-color: #ff9800;
+  -webkit-font-smoothing: antialiased;
 }
 
 .header-authn__sign-up:hover {
@@ -125,11 +124,37 @@ header {
   align-items: center;
 }
 
-.welcome__cta {
+.welcome__leftside {
   grid-column: 1 / 5;
   grid-row: 2 / 3;
   align-self: start;
-  margin: 24px 36px 0px 24px;
+  margin: 24px 62px 0px 0px;
+  font-family: 'Montserrat';
+  line-height: 2.6em;
+}
+
+.welcome__headline {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.welcome__tagline {
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+.welcome__cta {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 4px;
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #121212;
+  background-color: #ff9800;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .welcome__slider {
@@ -142,6 +167,8 @@ header {
   width: 854px;
   height: 573px;
 }
+
+
 
 /* <- WELCOME SECTION */
 
