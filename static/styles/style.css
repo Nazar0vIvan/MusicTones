@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Shift + Alt + A - block comment/uncomment */ 
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+b {
+  font-size: inherit;
+}
+
+body {
+  --slider-brown: #c8a991;
+}
+
+.container {
+  width: 1342px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* HEADER -> */
+
+header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 64px;
+  gap: 0 24px;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+}
+
+.logo__icon {
+  width: 44px;
+  height: 44px;
+}
+
+.logo__text{
+  margin-left: 5px;
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  color: #121212;
+} 
+
+.header-nav {
+  grid-column: 5 / 11;
+  grid-row: 1 / 2;
+}
+
+.header-nav a + a {
+  margin-left: 46px;
+}
+
+.header-nav a {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #121212;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.header-nav a:hover {
+  opacity: 1.0;
+}
+
+.header-authn {
+  grid-column: 11 / 13;
+  grid-row: 1 / 2;
+  justify-self: end;
+}
+
+.header-authn a + a {
+  margin-left: 20px;
+}
+
+.header-authn a {
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #121212;
+  -webkit-font-smoothing: antialiased;
+}
+
+.header-authn__log-in {
+  border: 1px solid #121212;
+}
+
+.header-authn__sign-up {
+  background-color: #ff9800;
+}
+
+.header-authn__sign-up:hover {
+  background-color: #FFAC32;
+}
+/* <- HEADER */
+
+/* SLIDER -> */
+
+.slider-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0 24px;
+  align-items: center;
+}
+
+.slider-welcome {
+  grid-column: 1 / 5;
+  grid-row: 2 / 3;
+  align-self: start;
+  margin: 24px 36px 0px 24px;
+}
+
+.slider-img {
+  grid-column: 5 / 13;
+  grid-row: 2 / 3;
+  align-self: start;
+}
+
+.slider-img > img {
+  width: 854px;
+  height: 573px;
+}
+
+/* <- SLIDER */
+
+
+/* media queries -> */
+
+
+/* <- media queries*/
