@@ -87,7 +87,7 @@ header {
 }
 
 .header-authn a {
-  padding: 10px 15px;
+  padding: 10px 16px;
   border-radius: 4px;
   font-size: 14px;
   font-weight: 600;
@@ -98,6 +98,13 @@ header {
 
 .header-authn__log-in {
   border: 1px solid #121212;
+  background: linear-gradient(to right, #ff9800 50%, white 50%);
+  background-size: 200% 100%;
+  transition: all 0.2s ease-out;
+}
+
+.header-authn__log-in:hover {
+  background-position: left bottom;
 }
 
 .header-authn__sign-up {
@@ -109,34 +116,34 @@ header {
 }
 /* <- HEADER */
 
-/* SLIDER -> */
+/* WELCOME SECTION -> */
 
-.slider-content {
+.welcome {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 0 24px;
   align-items: center;
 }
 
-.slider-welcome {
+.welcome__cta {
   grid-column: 1 / 5;
   grid-row: 2 / 3;
   align-self: start;
   margin: 24px 36px 0px 24px;
 }
 
-.slider-img {
+.welcome__slider {
   grid-column: 5 / 13;
   grid-row: 2 / 3;
   align-self: start;
 }
 
-.slider-img > img {
+.welcome__slider > img {
   width: 854px;
   height: 573px;
 }
 
-/* <- SLIDER */
+/* <- WELCOME SECTION */
 
 
 /* media queries -> */
