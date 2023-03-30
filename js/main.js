@@ -1,0 +1,3 @@
+function onClickedButton(){
+    alert('Clicked');
+}
