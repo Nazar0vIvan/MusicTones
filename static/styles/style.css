@@ -34,20 +34,35 @@ header {
   display: flex;
   align-items: center;
   grid-column: 1 / 5;
+  gap: 8px;
   grid-row: 1 / 2;
 }
 
 .logo__icon {
-  width: 44px;
-  height: 44px;
+  height: 48px;
 }
 
-.logo__text{
+.logo{
   margin-left: 5px;
   font-size: 1.8rem;
   letter-spacing: 0.05em;
+  font-weight: bold;
   color: #121212;
-} 
+}
+
+.logo-text__music {
+  /* font-family: 'Antipasto Pro'; */
+  padding: 6px;
+  background: linear-gradient(90deg, #FF8C00 0.05%, #FF9800 100%);
+  border-bottom-left-radius: 10px;
+}
+
+.logo-text__tones {
+  padding: 6px;
+  background: #121212;
+  border-top-right-radius: 10px;
+  color: white;
+}
 
 .header-nav {
   grid-column: 5 / 11;
