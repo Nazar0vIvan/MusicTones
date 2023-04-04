@@ -7,14 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MusicTones</title>
   <link rel="stylesheet" href="static/styles/style.css">
+  <link rel="icon" href="static/images/favicon.ico">
 </head>
 
 <body>
   <header class="header container">
-      <div class="logo-text">
-          <!-- <img class="logo__icon" src="static/images/logo-icon.png"></img> -->
-          <span class="logo-text__music">Music</span><span class="logo-text__tones">Tones</span>
-      </div>
+      <a href="index.html" class="logo-text">
+          <span class="logo-text__music">Music</span>
+          <span class="logo-text__tones">Tones</span>
+      </a>
       
       <nav class="header-nav">
           <a href="#" class="header-nav__link">MUSIC HISTORY</a>
@@ -30,29 +31,30 @@
       </div>
     </div>
   </header>
+
   <main>
     <section class="welcome-section" style="background: #c9af7d;">
       <div class="welcome container">
         <div class="welcome-leftside">
-          <h1 class="welcome-headline">
+          <p class="welcome-headline">
             Try every tone of music with Music Tones
-          </h1>
-          <h2 class="welcome-tagline">
+          </p>
+          <p class="welcome-tagline">
             Explore music whether you’re a beginner or a skillful pro.
-          </h2>
-          <h2 class="welcome-tagline">
-            Study, practice, and have fun absolutely for <span class="free-text">FREE</span>.
-          </h2>
-          <a href="#" class="cta">GET STARTED</a>
+          </p>
+          <p class="welcome-tagline">
+            Study, practice, and have fun absolutely for <span class="free-text">FREE</span>
+          </p>
+          <a href="#" class="cta">LET'S GO</a>
         </div>
-
         <div class="slider">
           <img src="static/images/sld-tommy1.png">
         </div>
       </div>
     </section>
-    <section class="study-section" style=" background: #d7dce4; height: 650px;">
-      <button class="test-button" onclick="onClickedButton()">CLick me !</button>
+
+    <section class="study-section" style="background: #d7dce4; height: 650px;">
+      <button  class="test-button" onclick="onClickedButton(this)">Click me !</button>
       <script src="js/main.js"></script>
     </section>
   </main>
