@@ -297,6 +297,34 @@ header {
   box-shadow: none;
 }
 
+.slider-ticks {
+  display: flex;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  place-self: end end;
+  gap: 20px;
+}
+
+.slider-tick {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #808080;
+  border: none;
+  transition: background-color 0.3s ease-in-out
+}
+
+.slider-tick:hover {
+  box-shadow: 0 0 4px 0 #fff;
+}
+
+.slider-tick:checked {
+  background-color: #fff;
+}
+
+
+
 /* <- SLIDER */
 
 /* STUDY SECTION --> */
