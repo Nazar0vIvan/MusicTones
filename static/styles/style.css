@@ -191,7 +191,7 @@ header {
 
 /* SLIDER -> */
 
-.slider {
+#slider {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -218,7 +218,7 @@ header {
   transition: margin-left 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.slider:hover .btn-randomize{
+#slider:hover .btn-randomize{
   opacity: 1.0;
   margin-left: 0;
 }
@@ -250,7 +250,7 @@ header {
   transition: margin-left 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.slider:hover .btn-arrow-left {
+#slider:hover .btn-arrow-left {
   opacity: 1.0;
   margin-left: 0;
 }
@@ -282,7 +282,7 @@ header {
   transition: margin-right 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.slider:hover .btn-arrow-right {
+#slider:hover .btn-arrow-right {
   opacity: 1.0;
   margin-right: 0;
 }
