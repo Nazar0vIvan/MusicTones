@@ -204,97 +204,69 @@ header {
   overflow: hidden;
 }
 
-.btn-randomize {
+.slider-btn {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   border: none;
   background-color: var(--black);
-  background-image: url("../images/dice.svg");
   background-repeat: no-repeat;
-  background-position: center;
   opacity: 0;
-  margin-left: -24px;
-  transition: margin-left 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-#slider:hover .btn-randomize{
-  opacity: 1.0;
-  margin-left: 0;
-}
-
-.btn-randomize:hover {
+.slider-btn:hover {
   filter: brightness(140%);
   box-shadow: 0 0 4px 0 var(--black);
 }
 
-.btn-randomize:active {
+.slider-btn:active {
   filter: none;
   box-shadow: none;
 }
 
-.btn-arrow-left {
+#slider:hover .slider-btn{
+  opacity: 1.0;
+}
+
+.randomize {
+  background-image: url("../images/dice.svg");
+  background-position: center;
+  margin-left: -24px;
+  transition: margin-left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#slider:hover .randomize{
+  margin-left: 0;
+}
+
+.arrow-left {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   place-self: center start;
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 50%;
-  background-color: var(--black);
   background-image: url("../images/arrow-left.svg");
-  background-repeat: no-repeat;
   background-position: 45% 50%;
   opacity: 0;
   margin-left: -24px;
   transition: margin-left 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-#slider:hover .btn-arrow-left {
-  opacity: 1.0;
+#slider:hover .arrow-left {
   margin-left: 0;
 }
 
-.btn-arrow-left:hover {
-  filter: brightness(140%);
-  box-shadow: 0 0 4px 0 var(--black);
-}
-
-.btn-arrow-left:active {
-  filter: none;
-  box-shadow: none;
-}
-
-.btn-arrow-right {
+.arrow-right {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   place-self: center end;
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 50%;
-  background-color: var(--black);
   background-image: url("../images/arrow-right.svg");
   background-repeat: no-repeat;
   background-position: 55% 50%;
-  opacity: 0;
   margin-right: -24px;
   transition: margin-right 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-#slider:hover .btn-arrow-right {
-  opacity: 1.0;
+#slider:hover .arrow-right {
   margin-right: 0;
-}
-
-.btn-arrow-right:hover {
-  filter: brightness(140%);
-  box-shadow: 0 0 4px 0 var(--black);
-}
-
-.btn-arrow-right:active {
-  filter: none;
-  box-shadow: none;
 }
 
 .slider-ticks {
