@@ -16,7 +16,7 @@ function set_random_images() {
     random_index = Math.floor(Math.random() * pb.length);
     selected_pb = pb[random_index]
 
-    document.getElementById('slider').style.backgroundImage = `url('/static/images/${selected_pb.path}')`
+    document.getElementById('slider-img').src = `static/images/${selected_pb.path}`
     document.getElementById('welcome-section').style.backgroundColor = selected_pb.background
   })();
 }
