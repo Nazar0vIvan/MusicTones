@@ -8,7 +8,7 @@
   <title>MusicTones</title>
   <link rel="stylesheet" href="static/styles/style.css">
   <link rel="icon" href="static/images/favicon.ico">
-  <script src="js/slider.js"></script>
+  <script src="js/slider.js" defer></script>
 </head>
 
 <body>
@@ -34,7 +34,7 @@
   </header>
 
   <main>
-    <section id="welcome-section" style="background-color: #d1f1ff">
+    <section id="welcome-section" style="background-color: #FB7B91">
       <div class="welcome container">
         <div class="welcome__leftside">
           <p class="welcome__headline">
@@ -49,22 +49,26 @@
           <a href="#" class="cta">LET'S GO</a>
         </div>
         <div id="slider">
-          <img id="slider-img" src="static/images/sld-adams.jpg">
-          <div class="slider-container">
-            <button class="slider-btn randomize" onclick="set_random_images()"></button>
-            <button class="slider-btn arrow-left"></button>
-            <button class="slider-btn arrow-right"></button>
+            <div class="slides">
+              <img class="slider-img" src="static/images/sld-buddy-guy.jpg" data-active>
+              <img class="slider-img" src="static/images/sld-adams.jpg">
+              <img class="slider-img" src="static/images/sld-elton.jpg">
+              <img class="slider-img" src="static/images/sld-hendrix.jpg">
+              <img class="slider-img" src="static/images/sld-tommy1.jpg">
+              <img class="slider-img" src="static/images/sld-ray.jpg">
+              <img class="slider-img" src="static/images/sld-hugo.jpg">
+            </div>
+            <button class="slider-btn randomize" onclick="setRandomSliderImages()"></button>
+            <button class="slider-btn prev" data-slider-button-nav="prev"></button>
+            <button class="slider-btn next" data-slider-button-nav="next"></button>
             <div class="slider-ticks">
-              <input type="radio" name="bullet" class="slider-tick">
-              <input type="radio" name="bullet" class="slider-tick">
-              <input type="radio" name="bullet" class="slider-tick">
+              <input type="radio" name="bullet" class="slider-tick" checked>
               <input type="radio" name="bullet" class="slider-tick">
               <input type="radio" name="bullet" class="slider-tick">
               <input type="radio" name="bullet" class="slider-tick">
               <input type="radio" name="bullet" class="slider-tick">
               <input type="radio" name="bullet" class="slider-tick">
             </div>
-          </div>
         </div>
 
       </div>

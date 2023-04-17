@@ -1,6 +1,19 @@
+const sliderButtons = document.querySelectorAll("[data-slider-button-nav")
 
-function set_random_images() {
+sliderButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.sliderButtonNav === "next" ? 1 : -1
+    const slides = button.closest("#slider").querySelector(".slides")
+    const activeSlide = slides.querySelector("[data-active]")
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset
+    if (newIndex < 0) newIndex = slides.children.length - 1
+    if (newIndex >= slides.children.length) newIndex = 0
+    slides.children[newIndex].dataset.active = true
+    delete activeSlide.dataset.active
+  })
+})
 
+function setRandomSliderImages() {
   const pb = [
     { path: "sld-buddy-guy.jpg", background: '#d3c7ba' },
     { path: "sld-elton.jpg",     background: '#efe3d7' },
@@ -9,7 +22,9 @@ function set_random_images() {
     { path: "sld-shaw.jpg",      background: '#c5c5c5' },
     { path: "sld-tommy1.jpg",    background: '#d4b194' },
     { path: "sld-waits.jpg",     background: '#c1c1c1' },
-    { path: "sld-adams.jpg",     background: '#d1f1ff' }
+    { path: "sld-adams.jpg",     background: '#d1f1ff' },
+    { path: "sld-ray.jpg",       background: '#d1f1ff' },
+    { path: "sld-hugo.jpg",      background: '#c5bcb3' }
   ];
   
   (() => {
@@ -20,3 +35,4 @@ function set_random_images() {
     document.getElementById('welcome-section').style.backgroundColor = selected_pb.background
   })();
 }
+
