@@ -293,16 +293,17 @@ header {
   transform: none;
 }
 
-.slider-ticks {
+.slider-bullets {
   position: relative;
   display: flex;
   grid-column: 2 / 3;
   grid-row: 3 / 4;
   place-self: end end;
   gap: 20px;
+  z-index: 2;
 }
 
-.slider-tick {
+.slider-bullet {
   appearance: none;
   width: 10px;
   height: 10px;
@@ -312,11 +313,11 @@ header {
   transition: background-color 0.3s ease-in-out
 }
 
-.slider-tick:hover {
+.slider-bullet:hover {
   box-shadow: 0 0 4px 0 #fff;
 }
 
-.slider-tick:checked {
+.slider-bullet:checked {
   background-color: #fff;
 }
 
