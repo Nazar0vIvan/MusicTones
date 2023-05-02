@@ -56,6 +56,11 @@ h3 {
   padding: 0 24px;
 }
 
+.section-tagline {
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--black);
+}
+
 /* HEADER -> */
 
 header {
@@ -161,7 +166,8 @@ header {
   align-items: center;
 }
 
-.welcome__leftside {
+.welcome-leftside {
+  position: relative;
   display: flex;
   flex-direction: column;
   grid-column: 1 / 5;
@@ -169,7 +175,14 @@ header {
   line-height: 3.0em;
   padding-top: 24px;
   align-items: start;
-  gap: 14px
+  gap: 14px;
+}
+
+.welcome-leftside__img {
+  position: absolute;
+  right: -24px;
+  top: 0;
+  z-index: 0;
 }
 
 .free-text {
@@ -187,11 +200,13 @@ header {
   background-color: var(--orange);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition: background-color 0.3s ease;
+  z-index: 1;
 }
 
 .cta:hover {
   background-color: var(--light-orange);
 }
+
 
 /* <- WELCOME SECTION */
 
@@ -331,13 +346,14 @@ header {
 
 /* STUDY SECTION --> */
 
-.study {
+.section {
   display: flex;
   flex-direction: column;
+  align-items: start;
   row-gap: 20px;
 
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 34px;
+  padding-bottom: 34px;
 }
 
 .cards {
@@ -351,9 +367,11 @@ header {
   width: 310px;
   border-radius: 14px;
   overflow: hidden;
+  color: var(--black)
 }
 
 .card-desc {
+  height: 101px;
   display: flex;
   flex-direction: column;
   background: var(--light-orange);
@@ -382,23 +400,23 @@ header {
 
 .card-desc__title::after{
   content: "";
-  mask-image: url("../images/card-arrow.svg");
-  background-color: var(--black);
+  background: transparent url("../images/card-arrow.png") no-repeat;
   position: absolute;
   width: 16px;
   height: 16px;
   top: 50%;
   transform: translateX(8px) translateY(-50%);
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  filter: brightness(30%);
 }
 
 .card:hover .card-desc__title::after{
   transform: translateX(16px) translateY(-50%);
-  background-color: var(--light-orange);
+
 }
 
-
-
-
+.card-desc__quote {
+  letter-spacing: -0.01em;
+}
 
 /* <- STUDY SECTION */
