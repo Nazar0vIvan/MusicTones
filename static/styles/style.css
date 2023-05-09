@@ -345,21 +345,28 @@ header {
 
 /* <- SLIDER */
 
+.cards {
+  display: inline-flex;
+  gap: 155px;
+}
+
 .card {
   position: relative;
-  display: inline-block;
   transition: transform 0.3s ease-in-out;
 }
 
-.history {
-  left: 400px;
+
+/* .history {
   top: 180px
 }
 
 .basics {
-  left: 760px;
   top: 80px
 }
+
+.harmony {
+  top: 180px
+} */
 
 .card-head {
   display: block;
