@@ -65,7 +65,7 @@ h3 {
 
 header {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(16, 1fr);
   grid-template-rows: 64px;
   gap: 0 24px;
   align-items: center;
@@ -73,7 +73,7 @@ header {
 
 .logo-text {
   display: block;
-  grid-column: 1 / 5;
+  grid-column: 1 / 6;
   align-items: center;
   font-size: 26px;
   font-family: 'Antipasto Pro';
@@ -103,8 +103,7 @@ header {
 .header-nav {
   display: flex;
   gap: 46px;
-  grid-column: 5 / 11;
-  grid-row: 1 / 2;
+  grid-column: 7 / 11;
   font-family: 'Open Sans';
 }
 
@@ -120,8 +119,7 @@ header {
 }
 
 .header-authn {
-  grid-column: 11 / 13;
-  grid-row: 1 / 2;
+  grid-column: 14 / 17;
   justify-self: end;
 }
 
@@ -159,35 +157,39 @@ header {
 
 /* WELCOME SECTION -> */
 
-.welcome {
+.section-hero {
+    background: linear-gradient(
+    to right,
+    var(--dark-orange) 0%,
+    var(--light-orange) calc(804/1920 * 100%),
+    var(--black) calc(804/1920 * 100%),
+    var(--black) 100%
+  );
+}
+
+.hero {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(16, 1fr);
   column-gap: 24px;
   align-items: center;
 }
 
-.welcome-leftside {
+.hero-left {
   position: relative;
   display: flex;
   flex-direction: column;
-  grid-column: 1 / 5;
+  grid-column: 1 / 7;
   align-self: start;
   line-height: 3.0em;
-  padding-top: 24px;
+  padding-top: 40px;
   align-items: start;
   gap: 14px;
 }
 
-.welcome-leftside__img {
-  position: absolute;
-  right: -24px;
-  top: 0;
-  z-index: 0;
-}
-
-.free-text {
+.underline-bold {
   border-bottom: 2px solid #121212;
   font-size: inherit;
+  color: inherit;
   font-weight: bold;
 }
 
