@@ -175,14 +175,14 @@ header {
 
 /* <- HEADER */
 
-/* WELCOME SECTION -> */
+/* HERO SECTION -> */
 
 .section-hero {
     background: linear-gradient(
     to right,
     var(--dark-orange) 0%,
-    var(--light-orange) max(509px, calc(0.52166 * 100vw - 203.58845px)),
-    var(--black) max(509px, calc(0.52166 * 100vw - 203.58845px)),
+    var(--light-orange) max(509px, calc(0.5 * 100vw - 170px)),
+    var(--black) max(509px, calc(0.5 * 100vw - 170px)),
     var(--black) 100%
   );
 }
@@ -193,36 +193,23 @@ header {
   align-items: center;
 }
 
-.hero-left-bgd {
-  position: absolute;
-  left: 0;
-  grid-column-end: 7;
-  height: 500px;
-  background: linear-gradient(
-    to right,
-    var(--dark-orange),
-    var(--light-orange)
-  );
+.hero-left{
+  position: relative;
+  grid-column: 1 / 7;
+  overflow: hidden;
 }
 
-
-.hero-left {
+.hero-left__text {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  grid-column: 1 / 7 ;
   align-self: start;
   align-items: start;
   line-height: 3.0em;
-  padding: 40px 66px 40px 0;
-/*   background: linear-gradient(
-    to right,
-    var(--dark-orange),
-    var(--light-orange)
-  ); */
+  padding: 40px 78px 40px 0;
 }
 
-.cta {
+.hero-left__cta {
   display: block;
   padding: 6px 16px;
   font-size: 16px;
@@ -230,20 +217,55 @@ header {
   margin-top: 16px;
 }
 
-/* <- WELCOME SECTION */
+.hero-left__clef {
+  position: absolute;
+  right: -84px;
+  top: 0;
+  width: 195px;
+  height: 100%;
+  background-color: var(--black);
+  mask-image: url(../images/clef.png);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url(../images/clef.png);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.hero-right {
+  display: flex;
+  position: relative;
+  grid-column: 7 / 17;
+  overflow: hidden;
+  justify-content: end;
+}
+
+.hero-right__clef {
+  position: absolute;
+  top: 0;
+  left: -111px;
+  width: 195px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    var(--dark-orange),
+    var(--light-orange)
+  );
+  mask-image: url(../images/clef.png);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url(../images/clef.png);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+}
 
 /* SLIDER -> */
 
 #slider {
-  grid-column: 5 / 13;
+  position: relative;
   height: 580px;
   overflow: hidden;
-  position: relative;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  padding: 24px;
+  
 }
 
 .slides {
@@ -255,6 +277,7 @@ header {
 
 .slider-img {
   position: absolute;
+  right: 0;
   opacity: 0;
   transition: opacity var(--slider-img-transition-delay) ease-in-out;
   transition-delay: var(--slider-img-transition-delay);
@@ -365,6 +388,8 @@ header {
 }
 
 /* <- SLIDER */
+
+/* <- HEADER */
 
 .cards {
   display: inline-flex;
