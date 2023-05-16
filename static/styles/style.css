@@ -177,38 +177,14 @@ header {
 
 /* WELCOME SECTION -> */
 
-/* .section-hero {
+.section-hero {
     background: linear-gradient(
     to right,
     var(--dark-orange) 0%,
-    var(--light-orange) max(509px, min(calc(509/1342 * 100%), calc(798/1920 * 100%))),
-    var(--black) max(509px, min(calc(509/1342 * 100%), calc(798/1920 * 100%))),
+    var(--light-orange) max(509px, calc(0.52166 * 100vw - 203.58845px)),
+    var(--black) max(509px, calc(0.52166 * 100vw - 203.58845px)),
     var(--black) 100%
   );
-} */
-
-@media screen and (max-width: 1366px) {
-  .section-hero {
-    background: linear-gradient(
-      to right,
-      var(--dark-orange) 0%,
-      var(--light-orange) 509px,
-      var(--black) 509px,
-      var(--black) 100%
-    );
-  }
-}
-
-@media screen and (min-width: 1366px) {
-  .section-hero {
-    background: linear-gradient(
-      to right,
-      var(--dark-orange) 0%,
-      var(--light-orange) calc(0.522 * 100vw - 204px),
-      var(--black) calc(0.522 * 100vw - 204px),
-      var(--black) 100%
-    );
-  }
 }
 
 .hero {
