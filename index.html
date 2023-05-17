@@ -51,27 +51,37 @@
           <div class="hero-left__clef"></div>
         </div>
         <div class="hero-right">
-          <div id="slider">
-            <div class="slides">
+          <div class="slider">
+            <div class="slider-header">
               <img class="slider-img" src="static/images/sld-elton.jpg" data-active>
-<!--               <img class="slider-img" src="static/images/sld-adams.jpg">
+              <!--               
+              <img class="slider-img" src="static/images/sld-adams.jpg">
               <img class="slider-img" src="static/images/sld-buddy-guy.jpg">
               <img class="slider-img" src="static/images/sld-hendrix.jpg">
-              <img class="slider-img" src="static/images/sld-tommy1.jpg"> -->
+              <img class="slider-img" src="static/images/sld-tommy1.jpg"> 
+              -->
+              <button class="slider-btn slider-btn_randomize" onclick="setRandomSliderImages()"></button>
+              <div class="slider-bullets">
+                <input type="radio" name="bullet" class="slider-bullet" checked>
+                <input type="radio" name="bullet" class="slider-bullet">
+                <input type="radio" name="bullet" class="slider-bullet">
+                <input type="radio" name="bullet" class="slider-bullet">
+                <input type="radio" name="bullet" class="slider-bullet">
+              </div>
             </div>
-            <button class="slider-btn randomize" onclick="setRandomSliderImages()"></button>
-            <div class="slider-bullets">
-              <input type="radio" name="bullet" class="slider-bullet" checked>
-              <input type="radio" name="bullet" class="slider-bullet">
-              <input type="radio" name="bullet" class="slider-bullet">
-              <input type="radio" name="bullet" class="slider-bullet">
-              <input type="radio" name="bullet" class="slider-bullet">
+            <div class="slider-footer">
+              <button class="slider-btn slider-btn_prev" data-slider-btn-nav="prev"></button>
+              <div class="slider-footer__caption">
+                <p class="slider-footer__quote">
+                  Music has healing power. It has the ability to take people out of themselves for a few hours.
+                </p>
+                <h3>
+                  - Elton John
+                </h3>
+              </div>
+              <button class="slider-btn slider-btn_next" data-slider-btn-nav="next"></button>
             </div>
           </div>
-          div.
-<!--           <button class="slider-btn prev" data-slider-button-nav="prev"></button>
-          <button class="slider-btn next" data-slider-button-nav="next"></button> -->
-
           <div class="hero-right__clef"></div>
         </div>
         
