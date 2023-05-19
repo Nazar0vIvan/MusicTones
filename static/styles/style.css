@@ -19,7 +19,8 @@
   --light-orange: #ffba00;
   --black: #121212;
   --gray: #e5e5e5;
-  --slider-img-transition-delay: 300ms
+  --slider-img-transition-delay: 300ms;
+  --card-size: 186px;
 }
 
 *, *::before, *::after {
@@ -427,7 +428,8 @@ header {
 
 .section-cont {
   position: relative;
-  padding: 60px 0
+  padding: 60px 0;
+  overflow: hidden;
 }
 
 .cont-bgd {
@@ -495,6 +497,7 @@ header {
 }
 
 .cards {
+  position: relative;
   display: inline-flex;
   grid-column: 7 / 17;
   padding-left: 84px;
@@ -524,8 +527,8 @@ header {
   display: block;
   position: relative;
   z-index: 1;
-  width: 186px;
-  height: 186px;
+  width: var(--card-size);
+  height: var(--card-size);
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid var(--black); 
@@ -533,7 +536,7 @@ header {
   color: var(--black);
 }
 
-.card:hover {
+.card-head:hover {
   transform: translateY(10px);
 }
 
@@ -556,7 +559,7 @@ header {
   flex-direction: column;
   gap: 14px;
   align-items: center;
-  padding-top: 10px;
+  padding: 10px 2px 0 2px;
   background-color: var(--black);
   transform: translateY(70%);
   transition:
@@ -599,13 +602,41 @@ header {
 
 .card-stem {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 174px;
+  height: 186px;
   width: 16px;
   background-color: var(--black);
   z-index: 0;
-  transform: translateY(-100px);
+  top: 0;
+  right: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-stem_up {
+  height: var(--card-size);
+  transform: translateY(-93px);
+}
+
+.card-head:hover ~ .card-stem_up {
+  transform: translateY(-83px);
+}
+
+.card-stem_down {
+  transform: translateY(93px);
+  height: 290px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-head:hover ~ .card-stem_down {
+  transform: translateY(103px);
+}
+
+.card-beam {
+  position: absolute;
+  left: 371px;
+  top: 332px;
+  height: 68px;
+  width: 320px;
+  background-color: var(--black);
 }
 
 /* <- CONTENT */
