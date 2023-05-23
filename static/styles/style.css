@@ -33,9 +33,14 @@
   box-sizing: border-box;
 }
 
+b {
+  font-size: inherit;
+  font-family: inherit;
+}
+
 h1 {
   font-size: 28px;
-  font-weight: bold;
+  font-weight: normal;
   font-family: 'Montserrat';
   text-transform: uppercase;
 }
@@ -457,6 +462,12 @@ header {
   grid-template-rows: repeat(3, 196px);
 }
 
+.bass-clef {
+  position: absolute;
+  grid-column: 1 / 7;
+  justify-self: end;
+}
+
 .cont-vlines {
   grid-column: 6;
   grid-row: 1 / 4;
@@ -477,6 +488,7 @@ header {
 }
 
 .cont-title {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 24px;
