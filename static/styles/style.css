@@ -19,6 +19,7 @@
   --light-orange: #ffba00;
   --black: #121212;
   --gray: #e5e5e5;
+  --footer: #5e5e5e;
   --slider-img-transition-delay: 300ms;
   --card-size: 186px;
 }
@@ -655,5 +656,5 @@ header {
 
 footer {
   height: 200px;
-  background-color: var(--gray);
+  background-color: var(--footer);
 }
