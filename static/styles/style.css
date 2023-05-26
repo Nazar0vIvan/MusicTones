@@ -71,6 +71,10 @@ h5 {
   font-family: 'Montserrat';
 }
 
+span {
+  font: inherit;
+}
+
 .container {
   width: 1342px;
   margin: 0 auto;
@@ -654,7 +658,98 @@ header {
 
 /* <- CONTENT */
 
+/* FOOTER -> */
+
 footer {
-  height: 200px;
   background-color: var(--footer);
 }
+
+.ftr-cont {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid gray;
+}
+
+.lists-container {
+  display: inline-flex;
+  gap: 80px;
+  padding-right: 40px;
+  border-right: 1px solid gray ;
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link-list > a {
+  color: white;
+  opacity: 0.8;
+}
+
+.link-list > a:hover {
+  opacity: 1;
+}
+
+.title-link {
+  color: var(--light-orange);
+  font-weight: medium;
+}
+
+.contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ftr-private {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ftr-copyright {
+  display: flex;
+  align-content: center;
+  gap: 4px;
+}
+
+.ftr-private div {
+  position: relative;
+  color: white;
+  font-size: 12px;
+}
+
+.ftr-quote {
+  display: inline;
+  margin-right: 16px;
+}
+
+.ftr-quote::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  background-image: url(../images/sld-quotes.svg);
+  background-size: contain;
+  height: 6px;
+  width: 8px;
+}
+.ftr-quote::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  background-image: url(../images/sld-quotes.svg);
+  background-size: contain;
+  height: 6px;
+  width: 8px;
+  transform: rotate(180deg);
+}
+
+
+
+
+
+/* <- FOOTER */
