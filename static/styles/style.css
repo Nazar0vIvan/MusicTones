@@ -34,6 +34,12 @@
   box-sizing: border-box;
 }
 
+p {
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+}
+
 b {
   font-size: inherit;
   font-family: inherit;
@@ -44,6 +50,7 @@ h1 {
   font-weight: normal;
   font-family: 'Montserrat';
   text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
 h2 {
@@ -69,6 +76,40 @@ h5 {
   font-size: 16px;
   font-weight: normal;
   font-family: 'Montserrat';
+  line-height: 1.7rem;
+}
+
+.small-quote {
+  display: inline-block;
+  position: relative;
+  font-style: italic;
+}
+
+.small-quote_inline{
+  display: inline;
+  margin-right: 16px;
+}
+
+.small-quote::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  background-image: url(../images/sld-quotes.svg);
+  background-size: contain;
+  height: 6px;
+  width: 8px;
+}
+
+.small-quote::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  background-image: url(../images/sld-quotes.svg);
+  background-size: contain;
+  height: 6px;
+  width: 8px;
+  transform: rotate(180deg);
 }
 
 .txt-light-orange {
@@ -243,7 +284,7 @@ header {
   align-self: start;
   align-items: start;
   line-height: 3.0em;
-  padding: 40px 78px 40px 0;
+  padding: 40px 60px 40px 0;
 }
 
 .hero-left__cta {
@@ -541,7 +582,7 @@ header {
   grid-row: 2;
   justify-self: end;
   transform: translateX(4px);
-  column-gap: 70px;
+  column-gap: 80px;
 }
 
 .cards_quiz {
@@ -576,7 +617,7 @@ header {
 
 .card-head__img {
   height: 60px;
-  width: 60px;
+  width: 80px;
   mask-position: center;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -675,7 +716,7 @@ header {
 
 .card-stem_down {
   transform: translateY(calc(var(--card-size)/2));
-  height: 270px;
+  height: 260px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -685,11 +726,18 @@ header {
 
 .card-beam {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
   right: 4px;
   top: 300px;
   height: 60px;
-  width: 488px;
+  width: 508px;
   background-color: var(--black);
+  color: white;
+  font-size: 13px;
 }
 
 /* <- CONTENT */
@@ -793,32 +841,6 @@ footer {
   font-size: 12px;
 }
 
-.ftr-bottom__quote {
-  display: inline;
-  margin-right: 16px;
-}
-
-.ftr-bottom__quote::before {
-  content: "";
-  position: absolute;
-  left: -12px;
-  background-image: url(../images/sld-quotes.svg);
-  background-size: contain;
-  height: 6px;
-  width: 8px;
-}
-
-.ftr-bottom__quote::after {
-  content: "";
-  position: absolute;
-  right: -10px;
-  bottom: 0;
-  background-image: url(../images/sld-quotes.svg);
-  background-size: contain;
-  height: 6px;
-  width: 8px;
-  transform: rotate(180deg);
-}
 
 
 
